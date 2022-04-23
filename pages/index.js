@@ -1,5 +1,6 @@
-import { FaStar } from "react-icons/fa";
+import Head from "next/head";
 import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -8,6 +9,11 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Star Rating React Component</title>
+        <meta name="description" content="Created By Pranav" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {[...Array(5)].map((star, i) => {
         const starNumber = i + 1;
         return (
